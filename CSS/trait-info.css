@@ -14,6 +14,8 @@ body {
     text-align: center;
     width: 80%;
     max-width: 900px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
 }
 
 .container h1 {

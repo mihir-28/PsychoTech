@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <title>Personality Trait Info</title>
         <link rel="stylesheet" href="./CSS/trait-info.css" />
+        <script src="./Scripts/trait-info.js"></script>
     </head>
     <body>
         <div class="container">
@@ -11,16 +12,14 @@
             <p id="trait-info"></p>
             <div class="cont">
                 <ul class="tipts">
-                    <li class="tipt">More Info</li>
-                    <li class="tipt">Strengths</li>
-                    <li class="tipt">Weaknesses</li>
-                    <li class="tipt">Relationships</li>
-                    <li class="tipt">Advice</li>
+                    <li onclick="showInfo('MoreInfo')" class="tipt">More Info</li>
+                    <li onclick="showInfo('Strengths')" class="tipt">Strengths</li>
+                    <li onclick="showInfo('Weaknesses')" class="tipt">Weaknesses</li>
+                    <li onclick="showInfo('Relationships')" class="tipt">Relationships</li>
+                    <li onclick="showInfo('Advice')" class="tipt">Advice</li>
                 </ul>
             </div>
         </div>
         <script src="./Scripts/result.js"></script>
     </body>
 </html>
-
-<!-- Strengths, Weakness, Relationships, Advice -->

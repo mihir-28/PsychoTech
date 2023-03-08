@@ -69,7 +69,6 @@ const submitBtn = document.getElementById('submit')
 let selected = []
 const personality = [];
 let currentQuiz = 0
-let score = 0
 loadQuiz()
 function loadQuiz() {
     deselectAnswers()
@@ -116,7 +115,6 @@ submitBtn.addEventListener('click', () => {
     const answer = getSelected()
     if (answer) {
         selected.push(answer)
-        score = selected.length
         currentQuiz++
         if (currentQuiz < quizData.length) {
             loadQuiz()
