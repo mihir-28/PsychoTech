@@ -1,4 +1,9 @@
 // Define an object with trait information
+
+// const myvaria = localStorage.getItem("selectedTrait");
+// const typeP = document.getElementById("result");
+// typeP.innerHTML = `<h1>Your Personality Type is ${myvaria}</h1>`;
+
 var traitInfo = {
   'ESTJ': 'Extravert | Sensing | Thinking | Judging.<br><br>You are a type ESTJ, aka The Supervisor. You tend to be logical and assertive above all else. You should consider a job in leadership or law.',
   'ISTJ': 'Introvert | Sensing | Thinking | Judging.<br><br>You are a type ISTJ, aka The Inspector. You tend to be practical and logical above all else. You should consider a job in accounting or engineering.',
