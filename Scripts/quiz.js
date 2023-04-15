@@ -66,6 +66,7 @@ const questionEl = document.getElementById('question')
 const a_text = document.getElementById('a_text')
 const b_text = document.getElementById('b_text')
 const submitBtn = document.getElementById('submit')
+var userEmail = localStorage.getItem('email')
 let selected = []
 const personality = [];
 let currentQuiz = 0
@@ -111,6 +112,7 @@ function type() {
     return personality.join("")
 }
 
+
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
     if (answer) {
@@ -120,7 +122,18 @@ submitBtn.addEventListener('click', () => {
             loadQuiz()
         } else {
             console.log(selected);
+            console.log(userEmail);
             const personalityS = type()
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "per.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                    // Handle response from PHP (if needed)
+                    console.log(xhr.responseText);
+                }
+            };
+            xhr.send("perType=" + encodeURIComponent(personalityS) + "&userEmail=" + encodeURIComponent(userEmail));
             quiz.innerHTML = `
            <h2>You Personality is ${personalityS}</h2>
            <button onclick="location.href='result.html'">Check Your Trait By Clicking Here</button>

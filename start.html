@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PsycoTech</title>
-    <link rel="stylesheet" href="./CSS/start.css">
-</head>
-<body>
-    <div class="wrapper">
-        <h1>Welcome to PsycoTech!!!</h1>
-        <div class="welcome_text">
-            <form class="welcome_form" name="welcome_form" onsubmit="submitForm(event)">
-                <input type="text" placeholder="Enter Your Name" name="name">
-                <button>Start Quiz</button>
-            </form>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>PsycoTech</title>
+        <link rel="stylesheet" href="./CSS/start.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Welcome to PsycoTech!!!</h1>
+            <div class="welcome_text">
+                <form
+                    class="welcome_form"
+                    name="welcome_form"
+                    action="insert.php"
+                    method="post"
+                >
+                    <input
+                        type="text"
+                        placeholder="Enter Your Name"
+                        name="name"
+                    />
+                    <input type="int" placeholder="Enter Your Age" name="age" />
+                    <input
+                        type="text"
+                        placeholder="Enter Your Email"
+                        name="email"
+                    />
+                    <button type="submit" onclick="submit()">Start Quiz</button>
+                </form>
+            </div>
         </div>
-    </div>
-
-    <script src="./Scripts/start.js"></script>
-</body>
+        <script src="./Scripts/start.js"></script>
+    </body>
 </html>
